@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14D136" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="OwnClass" representedClassName="OwnClass" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sid" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="teacher" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="touxiang" optional="YES" attributeType="Binary" syncable="YES"/>
+        <relationship name="r2Student" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Student" inverseName="r2Class" inverseEntity="Student" syncable="YES"/>
+    </entity>
+    <entity name="Student" representedClassName="Student" syncable="YES">
+        <attribute name="age" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ownClass" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sid" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="r2Class" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="OwnClass" inverseName="r2Student" inverseEntity="OwnClass" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Student" positionX="-45" positionY="0" width="128" height="120"/>
+        <element name="OwnClass" positionX="-18" positionY="54" width="128" height="120"/>
+    </elements>
+</model>
